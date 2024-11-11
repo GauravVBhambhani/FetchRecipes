@@ -21,8 +21,11 @@ struct LandingView: View {
                 Spacer()
                 
                 if networkManager.recipes.isEmpty {
-                    EmptyStateView(message: "We're continuously fetching new tasty recipes. Stay tuned!")
-                    Spacer()
+                    EmptyStateView(
+                        message: networkManager.errorMessage ?? "We're continuously fetching more recipes. Stay tuned!"
+                    )
+                    .padding(.top, 50)
+//                    Spacer()
                 }
                 else {
                     

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct DishDetailView: View {
     
@@ -27,27 +28,12 @@ struct DishDetailView: View {
                     
                     // Background Image
                     if let imageURL = dish.photoURLLarge {
-                        AsyncImage(url: imageURL) { phase in
-                            switch phase {
-                            case .empty:
-                                ProgressView()
-                                    .frame(height: 300)
-                            case .success(let image):
-                                image
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(height: 300)
-                                    .clipped()
-                                    .edgesIgnoringSafeArea(.top)  // Extend to the top of the screen
-                            case .failure:
-                                RoundedRectangle(cornerRadius: 12)
-                                    .fill(Color.gray.opacity(0.3))
-                                    .frame(height: 300)
-                                    .overlay(Text("Image Unavailable").foregroundColor(.white))
-                            @unknown default:
-                                EmptyView()
-                            }
-                        }
+                        KFImage(imageURL)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(height: 300)
+                            .clipped()
+                            .edgesIgnoringSafeArea(.top)  // Extend to the top of the screen
                     }
                     
                     // Custom Back Button on Top Left

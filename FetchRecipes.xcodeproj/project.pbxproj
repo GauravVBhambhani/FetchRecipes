@@ -75,21 +75,14 @@
 		10CEC9372CDBEBF600C942DF /* FetchRecipes */ = {
 			isa = PBXGroup;
 			children = (
-				10CEC9782CE197BE00C942DF /* Models */,
 				10CEC9382CDBEBF600C942DF /* FetchRecipesApp.swift */,
-				10CEC93A2CDBEBF600C942DF /* LandingView.swift */,
-				10CEC93C2CDBEBFA00C942DF /* Assets.xcassets */,
+				10CEC9782CE197BE00C942DF /* Models */,
+				10CEC9942CE223AA00C942DF /* Views */,
 				10CEC93E2CDBEBFA00C942DF /* Preview Content */,
-				10CEC9462CDC032A00C942DF /* DishCardView.swift */,
-				10CEC97B2CE1987A00C942DF /* NetworkManager.swift */,
-				10CEC97D2CE19CBA00C942DF /* CuisineCardView.swift */,
-				10CEC97F2CE19CE000C942DF /* CuisineDetailView.swift */,
-				10CEC9812CE1A93D00C942DF /* ListCardView.swift */,
-				10CEC9832CE1B03800C942DF /* DishDetailView.swift */,
-				10CEC98C2CE1BBC600C942DF /* VideoPlayerView.swift */,
-				10CEC98E2CE1C05500C942DF /* ArticleWebView.swift */,
-				10CEC9902CE21BBA00C942DF /* EmptyStateView.swift */,
+				10CEC9952CE223CC00C942DF /* Components */,
+				10CEC9962CE223E200C942DF /* Helpers */,
 				10CEC9922CE21EC800C942DF /* FetchLaunchView.storyboard */,
+				10CEC93C2CDBEBFA00C942DF /* Assets.xcassets */,
 			);
 			path = FetchRecipes;
 			sourceTree = "<group>";
@@ -106,8 +99,39 @@
 			isa = PBXGroup;
 			children = (
 				10CEC9792CE197DE00C942DF /* Recipe.swift */,
+				10CEC97B2CE1987A00C942DF /* NetworkManager.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		10CEC9942CE223AA00C942DF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				10CEC93A2CDBEBF600C942DF /* LandingView.swift */,
+				10CEC97F2CE19CE000C942DF /* CuisineDetailView.swift */,
+				10CEC9832CE1B03800C942DF /* DishDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		10CEC9952CE223CC00C942DF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				10CEC9462CDC032A00C942DF /* DishCardView.swift */,
+				10CEC97D2CE19CBA00C942DF /* CuisineCardView.swift */,
+				10CEC9812CE1A93D00C942DF /* ListCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		10CEC9962CE223E200C942DF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				10CEC98C2CE1BBC600C942DF /* VideoPlayerView.swift */,
+				10CEC98E2CE1C05500C942DF /* ArticleWebView.swift */,
+				10CEC9902CE21BBA00C942DF /* EmptyStateView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

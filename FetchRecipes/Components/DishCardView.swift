@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct DishCardView: View {
     let imageURL: URL?
@@ -16,14 +17,10 @@ struct DishCardView: View {
         VStack (alignment: .leading, spacing: 16) {
             
             if let imageURL = imageURL {
-                AsyncImage(url: imageURL) { image in
-                    image.resizable()
-                        .scaledToFill()
-                         .frame(width: 200, height: 150)
-                } placeholder: {
-                    ProgressView()
-                        .frame(width: 150, height: 100)
-                }
+                KFImage(imageURL) 
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 200, height: 150)
                 
             } else {
                 RoundedRectangle(cornerRadius: 10)

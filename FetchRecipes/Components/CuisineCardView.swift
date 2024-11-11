@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CuisineCardView: View {
     let cuisine: String
@@ -16,15 +17,12 @@ struct CuisineCardView: View {
             VStack {
                 
                 if let imageURL = imageURL {
-                    AsyncImage(url: imageURL) { image in
-                        image.resizable()
-                            .scaledToFill()
-                            .frame(height: 100)
-                        //                        .cornerRadius(10)
-                    } placeholder: {
-                        ProgressView()
-                            .frame(height: 100)
-                    }
+                    KFImage(imageURL)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(height: 150)
+                        //  .cornerRadius(10)
+                    
                 } else {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color.gray.opacity(0.3))

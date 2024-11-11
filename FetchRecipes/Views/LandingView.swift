@@ -51,14 +51,14 @@ struct LandingView: View {
                                                     .padding()
                                             }
                                             
-                                            //                                    Rectangle()
-                                            //                                        .frame(width: 150, height: 150)
+                                            // Rectangle()
+                                            // .frame(width: 150, height: 150)
                                         }
                                     }
                                     .padding(.horizontal)
                                     
                                 }
-                                //                                .frame(maxHeight: .infinity)
+                                // .frame(maxHeight: .infinity)
                             }
                             
                             
@@ -80,11 +80,11 @@ struct LandingView: View {
                                     }
                                     
                                     
-                                    //                                CuisineCardView()
-                                    //                                Rectangle()
-                                    //                                    .frame(width: 150, height: 150)
-                                    //                                    .cornerRadius(10)
-                                    //                                DishCardView()
+                                    // CuisineCardView()
+                                    // Rectangle()
+                                    // .frame(width: 150, height: 150)
+                                    // .cornerRadius(10)
+                                    // DishCardView()
                                 }
                             }
                             .padding()

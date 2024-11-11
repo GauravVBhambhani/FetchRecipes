@@ -14,12 +14,17 @@ class NetworkManager: ObservableObject {
 
     private let allRecipesURL = URL(string: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json")!
     
-    private let malformedRecipesURL = URL(string: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes-malformed.json")!
-    private let emptyRecipesURL = URL(string: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes-empty.json")!
+//    private let malformedRecipesURL = URL(string: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes-malformed.json")!
+//    private let emptyRecipesURL = URL(string: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes-empty.json")!
     
+    private let session: URLSession
+    
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
     
     func fetchRecipes() {
-        URLSession.shared.dataTask(with: allRecipesURL) { data, response, error in
+        session.dataTask(with: allRecipesURL) { data, response, error in
             DispatchQueue.main.async {
                 if let error = error {
                     self.errorMessage = "Failed to load recipes: \(error.localizedDescription)"
